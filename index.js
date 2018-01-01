@@ -1,6 +1,6 @@
 'use strict';
 
-function formatted(fmt, obj) {
+function format(fmt, obj) {
     var keys = fmt.match(/{[^}]*/g);
     var keyNames = keys.map(function (x) {
         return x.split('{').pop().split('}').shift();
@@ -14,5 +14,5 @@ function formatted(fmt, obj) {
 }
 
 module.exports = {
-    formatted: formatted
+    format
 };
